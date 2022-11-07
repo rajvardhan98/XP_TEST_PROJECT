@@ -1,0 +1,29 @@
+<div class="form">
+    <div class="form-content">
+        <div class="form-head">Add Data in the database</div>
+      
+        <form class="example-form" [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Name</mat-label>
+              <input  matInput  placeholder="Ex. Tom Hardy" formControlName="name">
+              <mat-error>
+                Please enter a name
+              </mat-error>
+            </mat-form-field>
+          
+          <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Subject</mat-label>
+              <input  matInput placeholder="Ex. Data Structure" formControlName="subject">
+              <mat-error>
+                Please enter a subject
+              </mat-error>
+            </mat-form-field>
+          
+            <div class="btn">
+              <a mat-button routerLink="/home/getall">Return</a>
+              <button mat-raised-button>Submit</button>
+            </div>
+          </form>
+
+    </div>
+    </div>

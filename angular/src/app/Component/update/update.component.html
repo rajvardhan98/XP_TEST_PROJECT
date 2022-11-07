@@ -1,0 +1,45 @@
+<div class="container">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Subject</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of DataArray">
+        <th scope="row">{{data.id}}</th>
+        <td>{{data.name}}</td>
+        <td>{{data.subject}}</td>
+        <td><button type="button" class="btn btn-sm btn-outline-primary" (click)="editData(data)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-container *ngIf="data">
+    <h2 class="py-4">Edit Data</h2>
+    <form [formGroup]="data">
+      <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="subject" class="col-sm-2 col-form-label">Subject</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="subject" formControlName="subject">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-4 offset-sm-2">
+          <button type="submit" class="btn btn-primary mr-2" (click)="save()">Save</button>
+          <button type="reset" class="btn btn-outline-primary" (click)="cancel()">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </ng-container>
+</div>

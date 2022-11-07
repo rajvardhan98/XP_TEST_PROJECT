@@ -1,0 +1,14 @@
+<div class="count" *ngIf="DataArray">Displaying {{DataArray.length}} Records</div>
+<div class="display-data">
+    <div *ngFor="let data of DataArray">
+        <mat-card class="data-card">
+            <mat-card-title class="note-name" (click)="get(data)">
+                {{data.name}}
+            </mat-card-title>
+            <img class="delete" src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48.svg" (click)="onDelete(data.id)" >
+            <mat-card-content class="note-sub">
+                {{data.subject}}
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

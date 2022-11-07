@@ -1,0 +1,27 @@
+.display{
+    margin-top: 47px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 970px;
+    margin-left: 95px;
+  }
+  .details{
+    padding: 10px 10px 10px 25px;
+    width: 100%;
+  }
+  .Name{
+    letter-spacing: 0px;
+    font-size: 26px;
+    font-weight: 500;
+    color: #0A0102;
+    margin-bottom: 10px;
+  }
+  .Subject{
+    letter-spacing: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #878787;
+    margin-bottom: 10px;
+  }
+ 

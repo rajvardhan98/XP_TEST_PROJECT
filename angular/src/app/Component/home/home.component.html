@@ -1,0 +1,23 @@
+<div class="example-container" >
+    <mat-toolbar color="primary" class="example-toolbar">
+      <button mat-icon-button (click)="snav.toggle()">
+        <mat-icon class="menu-icon">menu</mat-icon>
+      </button>
+      <h1 class="example-app-name">Test App</h1>
+      <div class="right-icons">
+        <img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" routerLink="/home/adddata">
+        <img src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg">
+      </div>
+    </mat-toolbar>
+  
+    <mat-sidenav-container class="example-sidenav-container">
+      <mat-sidenav #snav fixedTopGap="56">
+        <mat-nav-list>
+          <a mat-list-item routerLink="/home/getall"><img src="../../../assets/home_FILL0_wght400_GRAD0_opsz48.svg" width="28%">&nbsp;Home</a>
+          <a mat-list-item routerLink="/home/edit"><img src="../../../assets/edit_note_FILL0_wght400_GRAD0_opsz48.svg" width="29%">&nbsp;Edit Data</a>
+          <a mat-list-item routerLink="/home/about"><img src="../../../assets/details_FILL0_wght400_GRAD0_opsz48.svg" width="28%">&nbsp;About</a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <div><router-outlet></router-outlet></div>
+    </mat-sidenav-container>
+  </div>
